@@ -1,0 +1,30 @@
+---
+import LinkButton from "./LinkButton";
+
+const { title, href, info, reference } = Astro.props;
+---
+
+<div
+  class="rounded-md text-emerald p-4 border-emerald border-opacity-50 hover:border-opacity-100 border-solid border-[3px]"
+>
+  <h4 class="font-semibold">{title}</h4>
+  <p class="text-sm pt-2">{info}</p>
+  <div class="text-sm">
+    <LinkButton
+      type="link"
+      iconType="code"
+      buttonText="Github link"
+      href={href}
+      external={true}
+      iconHover={false}
+    />
+    <LinkButton
+      type="link"
+      iconType="globe"
+      buttonText="Read more about this project"
+      href={reference}
+      external={true}
+      iconHover={false}
+    />
+  </div>
+</div>

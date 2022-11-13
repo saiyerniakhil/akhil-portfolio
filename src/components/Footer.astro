@@ -1,0 +1,41 @@
+---
+import LinkButton from "./LinkButton";
+---
+
+<footer class="w-full relative bottom-0 bg-midnightgreen text-white">
+  <div class="flex flex-row justify-between items-start built-with py-4 px-8">
+    <div>
+      <div>
+        <ul class="text-xs">
+          <li>
+            made with ❤️ by
+            <a class="text-emerald" href="https://saiyerniakhil.in">🗲 Akhil</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center">
+        <span class="mr-2">Built with</span>
+        <LinkButton
+          type="link"
+          iconType="astro"
+          buttonText=""
+          href="https://astro.build/"
+          external={true}
+          iconHover={false}
+        />
+      </div>
+    </div>
+    <div>
+      <div class="flex items-end">
+        <ul class="text-xs">
+          <li>
+            Icons from
+            <a class="text-emerald" href="https://feathericons.com/"
+              >🪶 Feather Icons</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

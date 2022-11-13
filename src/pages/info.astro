@@ -1,0 +1,124 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Icons from "../components/icons";
+import LinkButton from "../components/LinkButton";
+import SocialMediaLinks, {
+  SocialHandleItem,
+} from "../components/SocialMediaLinks";
+import WorkExperienceStepper, {
+  WorkExperienceItem,
+} from "../components/WorkExperienceStepper";
+import Layout from "../layouts/Layout.astro";
+
+const workExperience: Array<WorkExperienceItem> = [
+  {
+    company: "Accuknox Inc.",
+    fromDuration: "Aug 2021",
+    toDuration: "Present",
+    role: "React.js Developer",
+    description:
+      "I primarily worked on building the UI part of SaaS platform built with React.js that enables zero trust runtime security on multiple workloads such as Kubernetes and VMs which includes building Responsive and custom components in an Agile manner. I have also been managing the UI team for two months now, ensuring the code quality through code reviews  and the quick release of the features every sprint. I have been a part of interviews helping my company hire React developers and trainees.",
+    technologies: [
+      "React.js",
+      "JavaScript",
+      "Tailwind",
+      "React-Query",
+      "Redux",
+    ],
+    location: "Chennai, India",
+  },
+  {
+    company: "Tyutee",
+    fromDuration: "April 2021",
+    toDuration: "July 2021",
+    role: "Frontend Engineer",
+    description:
+      "I haved worked on developing the company's website and also in the process I have collaborated with UX designers and other developers to convert the figma designs into responsive UI on time. I have also worked on integrating a Razorpay payment gateway and worked with Zoho CRM's webforms to collate leads and contacts together to the CRM. Have converted all the forms across the site which were using PHP to collect user data to make the forms capture the user data and store into Zoho CRM.I haved worked on developing the company's website and also in the process I have collaborated with UX designers and other developers to convert the figma designs into responsive UI on time. I have also worked on integrating a Razorpay payment gateway and worked with Zoho CRM's webforms to collate leads and contacts together to the CRM. Have converted all the forms across the site which were using PHP to collect user data to make the forms capture the user data and store into Zoho CRM.",
+    technologies: ["React.js", "JavaScript", "HTML", "CSS"],
+    location: "Bengaluru · Remote",
+  },
+  {
+    company: "Publicis Sapient",
+    fromDuration: "Jan 20, 2020",
+    toDuration: "March 5, 2021",
+    role: "Graduate Engineer Trainee, Associate Technology L1",
+    description:
+      "I worked on a commerce intelligence platform that offered key insights for the partner brands based on data scraped from e-commerce sites and used Java, Spring Boot, Python, and Airflow as and was responsible for code coverage of 50% for an entire microservice starting from scratch and have also deployed Airflow DAGs to automate the data collection process. I worked with React, React-Router, Redux, and Styled-Components to redesign a client's e-commerce website, whereas as a part of the team I made a line-clamp utility, which was used throughout the entire application. I was also part of the training phase where I worked on Java, Spring Boot and React.js.",
+    technologies: [
+      "Spring Boot",
+      "Java",
+      "Python",
+      "JavaScript",
+      "React.js",
+      "Microsoft Azure",
+    ],
+    location: "Gurgaon, India",
+  },
+  {
+    company: "Sathybama Coding Club",
+    fromDuration: "Sep, 2018",
+    toDuration: "Sep, 2019",
+    role: "Moderator",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    location: "Chennai, India",
+  },
+];
+
+const socialHandles: Array<SocialHandleItem> = [
+  {
+    type: "linkedIn",
+    username: "Sai Yerni Akhil",
+    href: "https://www.linkedin.com/in/sai-yerni-akhil-madabattula/",
+  },
+  {
+    type: "twitter",
+    username: "@sai_yerni",
+    href: "https://twitter.com/sai_yerni",
+  },
+  {
+    type: "github",
+    username: "@saiyerniakhil",
+    href: "https://github.com/saiyerniakhil",
+  },
+  {
+    type: "instagram",
+    username: "@sai_yerni_akhil",
+    href: "https://instagram.com/sai_yerni_akhil",
+  },
+];
+---
+
+<Layout title="Sai Yerni Akhil | Info">
+  <Header />
+  <main class="text-emerald">
+    <div class="flex justify-between items-center">
+      <div class="text-emerald flex items-center">
+        <span class="mr-2">
+          <Icons type="work" />
+        </span>
+        <h3 class="font-semibold underline">Work Experience</h3>
+      </div>
+      <LinkButton
+        type="link"
+        iconType="download"
+        iconHover={false}
+        buttonText="Resume"
+        external={true}
+        href="https://drive.google.com/file/d/1S4ifccmvx9L6c2wfaDDxgf6kDjrqL6c9/view?usp=sharing"
+      />
+    </div>
+    <WorkExperienceStepper workDetails={workExperience} />
+
+    <div class="text-emerald flex items-center">
+      <span class="mr-2">
+        <Icons type="connect" />
+      </span>
+      <h3 class="font-semibold underline text-emerald">Connect with me</h3>
+    </div>
+    <SocialMediaLinks handles={socialHandles} />
+  </main>
+  <Footer />
+</Layout>
+
+<style></style>
