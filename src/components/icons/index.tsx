@@ -13,6 +13,7 @@ import TailwindIcon from "./TailwindIcon";
 import ToolIcon from "./ToolIcon";
 import Twitter from "./Twitter";
 import WorkIcon from "./WorkIcon";
+import CoffeeIcon from "./CoffeeIcon";
 
 const Icons = ({ type = "info" }): ReactElement => {
   switch (type) {
@@ -44,6 +45,8 @@ const Icons = ({ type = "info" }): ReactElement => {
       return <InfoIcon />;
     case "connect":
       return <ConnectIcon />;
+    case "coffee":
+      return <CoffeeIcon/>
     default:
       return <></>;
   }
