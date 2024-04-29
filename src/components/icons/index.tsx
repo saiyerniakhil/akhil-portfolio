@@ -46,7 +46,7 @@ const Icons = ({ type = "info" }): ReactElement => {
     case "connect":
       return <ConnectIcon />;
     case "coffee":
-      return <CoffeeIcon/>
+      return <CoffeeIcon />;
     default:
       return <></>;
   }

@@ -3,8 +3,6 @@
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "strict": true,
-    // Error when a value import is only used as a type.
-    "importsNotUsedAsValues": "error",
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }
