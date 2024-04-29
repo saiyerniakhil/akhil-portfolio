@@ -24,7 +24,8 @@ const LinkButton = ({
               <Icons type={iconType} />
             </span>
           )}
-          <span>{buttonText}</span>
+         {buttonText && 
+          <span>{buttonText}</span>}
         </a>
       );
       break;
