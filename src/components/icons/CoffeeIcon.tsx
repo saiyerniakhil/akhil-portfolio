@@ -11,7 +11,7 @@ const CoffeeIcon = () => {
       stroke="currentColor"
       strokeWidth="2"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
       className="feather feather-coffee"
     >
       <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
