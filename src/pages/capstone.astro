@@ -1,0 +1,58 @@
+---
+import Card from "../components/Card.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Icons from "../components/icons";
+import LinkButton from "../components/LinkButton";
+import Layout from "../layouts/Layout.astro";
+
+const projects = [
+  {
+    title: "scapy-cip-enip",
+    href: "https://github.com/saiyerniakhil/scapy-cip-enip",
+    info: "This repository contains a Python library which can be used to interact with components of a network using ENIP (Ethernet/IP) and CIP (Common Industrial Protocol) protocols.",
+    reference:
+      "https://github.com/saiyerniakhil/scapy-cip-enip?tab=readme-ov-file#ethernetip-dissectors-for-scapy",
+  },
+  {
+    title: "CIP Traffic Generator CLI",
+    href: "https://github.com/saiyerniakhil/CIPPacketGen",
+    info: "CLI tool that generates CIP Packets similar to how a PLC would",
+    reference:
+      "https://github.com/saiyerniakhil/CIPPacketGen",
+  },
+];
+---
+<Layout title="Sai Yerni Akhil | Capstone">
+    <Header />
+    <main class="text-emerald h-screen">
+        <div class="flex justify-between items-center">
+            <div class="text-emerald flex items-center">
+                <span class="mr-2">
+                    <Icons type="tool" />
+                </span>
+                <h2 class="h2 font-semibold underline">Master's Capstone Project</h2>
+                
+            </div>
+        </div>
+        <div class="pt-4">
+            <h3 class="h3">Welcome to my master's capstone project page. </h3>
+            <p>This project is built as a part of the COMPSCI995: Master's Capstone Project at University of Wisconsin - Milwaukee. </p>
+            <p class="mt-2">Here are some important links -</p>
+        </div>
+
+        <div class="flex flex-col gap-4 py-4">
+            {
+              projects.map((projectItem) => (
+                <Card
+                  title={projectItem.title}
+                  href={projectItem.href}
+                  info={projectItem.info}
+                  reference={projectItem.reference}
+                />
+              ))
+            }
+        </div>
+    </main>
+    <Footer />
+</Layout>
