@@ -4,10 +4,10 @@ import Header from "../components/Header.astro";
 import Icons from "../components/icons";
 import LinkButton from "../components/LinkButton";
 import SocialMediaLinks, {
-    SocialHandleItem,
+    type SocialHandleItem,
 } from "../components/SocialMediaLinks";
 import WorkExperienceStepper, {
-    WorkExperienceItem,
+    type WorkExperienceItem,
 } from "../components/WorkExperienceStepper";
 import Layout from "../layouts/Layout.astro";
 
@@ -18,13 +18,13 @@ const workExperience: Array<WorkExperienceItem> = [
         toDuration: "Present",
         role: "SWE",
         description: "Developer Productivity Engineering",
-        technologies: ["C#", ".NET", "API", "GoLang", "Powershell"],
+        technologies: ["React", "GoLang"],
         location: "Bellevue, Seattle (Remote)",
     },
     {
         company: "Wisconsin Department of Corrections",
         fromDuration: "Jun 2024",
-        toDuration: "Present",
+        toDuration: "Aug 2024",
         role: "Web Content Technician",
         description: "Web Developer Intern",
         technologies: ["JavaScript", "HTML", "CSS", "React.js"],
