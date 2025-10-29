@@ -18,7 +18,7 @@ const workExperience: Array<WorkExperienceItem> = [
         toDuration: "Present",
         role: "SWE",
         description: "Developer Productivity Engineering",
-        technologies: ["React", "GoLang"],
+        technologies: ["React", "GoLang", "Platform Engineering"],
         location: "Bellevue, Seattle (Remote)",
     },
     {
@@ -110,7 +110,7 @@ const workExperience: Array<WorkExperienceItem> = [
     },
 ];
 
-const socialHandles: Array<SocialHandleItem> = [
+export const socialHandles: Array<SocialHandleItem> = [
     {
         type: "linkedIn",
         username: "Sai Yerni Akhil",
@@ -154,15 +154,6 @@ const socialHandles: Array<SocialHandleItem> = [
             />
         </div>
         <WorkExperienceStepper workDetails={workExperience} />
-
-        <div class="text-emerald flex items-center">
-            <span class="mr-2">
-                <Icons type="connect" />
-            </span>
-            <h3 class="font-semibold underline text-emerald">
-                Connect with me
-            </h3>
-        </div>
         <SocialMediaLinks handles={socialHandles} />
     </main>
     <Footer />

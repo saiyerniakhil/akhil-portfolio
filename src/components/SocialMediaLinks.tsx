@@ -13,6 +13,14 @@ export interface SocialMediaLinksProps {
 const SocialMediaLinks = ({ handles }: SocialMediaLinksProps) => {
   return (
     <>
+    <div className="text-emerald flex items-center">
+            <span className="mr-2">
+                <Icons type="connect" />
+            </span>
+            <h3 className="font-semibold underline text-emerald">
+                Connect with me
+            </h3>
+        </div>
       <div className="grid grid-cols-1 ml-auto sm:grid-cols-2 gap-2 m-4">
         {handles.map((item, itemIndex: number) => (
           <a
