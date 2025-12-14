@@ -1,0 +1,59 @@
+---
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { socialLinks, personalInfo } from '../data/social-links';
+
+const iconMap = {
+  github: FiGithub,
+  linkedin: FiLinkedin,
+  twitter: FiTwitter,
+};
+
+const displaySocialLinks = socialLinks.filter(link =>
+  link.type === 'github' || link.type === 'linkedin' || link.type === 'twitter'
+);
+---
+
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-24">
+  <div class="max-w-4xl mx-auto">
+    <!-- Animated greeting -->
+    <div class="animate-fade-in">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+        <span class="inline-block animate-slide-in">Hello, There!</span>
+        <span class="inline-block ml-2">👋</span>
+      </h1>
+    </div>
+
+    <!-- Introduction -->
+    <div class="space-y-4 text-lg sm:text-xl text-muted-foreground animate-slide-up" style="animation-delay: 0.2s;">
+      <p>
+        I am <span class="text-foreground font-semibold">{personalInfo.fullName}</span>, a{' '}
+        <span class="text-primary-600 dark:text-primary-500 font-semibold">{personalInfo.title}</span>{' '}
+        who loves to build and tinker applications.
+      </p>
+
+      <p class="text-base sm:text-lg">
+        I'm passionate about building robust systems, exploring new technologies,
+        and sharing my learnings through writing. Currently working with Go, GraphQL, React, Docker,
+        and cloud technologies to build scalable developer platforms and applications at GEICO Tech.
+      </p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="mt-8 flex flex-wrap gap-4 animate-slide-up" style="animation-delay: 0.4s;">
+      {displaySocialLinks.map((link) => {
+        const Icon = iconMap[link.type as keyof typeof iconMap];
+        return (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary hover:bg-accent transition-all duration-200 hover:scale-105 group"
+          >
+            <Icon className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            <span class="font-medium">{link.name}</span>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>
