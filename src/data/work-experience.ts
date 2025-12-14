@@ -71,11 +71,11 @@ export const workExperience: Experience[] = [
         location: 'Bengaluru, India',
         period: 'Apr 2021 - Jul 2021',
         description: [
-            'Developed landing pages using Angular.js and integrated with Zoho CRM to streamline user registration, increasing conversion rates by 40%.',
+            'Developed landing pages using React.js and integrated with Zoho CRM to streamline user registration, increasing conversion rates by 40%.',
             'Built product checkout pages with Razorpay payment gateway integration.',
             'Added Google Calendar integration to Django SaaS application.',
         ],
-        technologies: ['Angular.js', 'Zoho CRM', 'Razorpay', 'Django', 'Google Calendar API', 'Python'],
+        technologies: ['React.js', 'Zoho CRM', 'Razorpay', 'Django', 'Google Calendar API', 'Python'],
     },
     {
         role: 'Associate Technology L1',
