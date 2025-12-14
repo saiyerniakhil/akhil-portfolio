@@ -50,7 +50,7 @@ export default function WorkExperience() {
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-400"
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary-500/10 dark:bg-primary-500/20 text-primary-700 dark:text-primary-300 border border-primary-200 dark:border-primary-800"
                       >
                         {tech}
                       </span>

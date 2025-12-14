@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from './ThemeToggle';
+import ColorPicker from './ColorPicker';
 
 const currentPath = Astro.url.pathname;
 ---
@@ -43,6 +44,9 @@ const currentPath = Astro.url.pathname;
             Blog
           </a>
         </div>
+
+        <!-- Color Picker -->
+        <ColorPicker client:load />
 
         <!-- Theme Toggle -->
         <ThemeToggle client:load />
