@@ -44,7 +44,7 @@ export default function WorkExperience() {
                     </div>
                   </div>
 
-                  <p className="text-muted-foreground mb-4">{exp.description}</p>
+                  <p className="text-muted-foreground mb-4">{exp.description.join(' ')}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.technologies.map((tech) => (

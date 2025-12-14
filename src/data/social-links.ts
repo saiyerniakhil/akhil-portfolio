@@ -16,10 +16,10 @@ export interface PersonalInfo {
 }
 
 export const personalInfo: PersonalInfo = {
-  name: 'Akhil',
+  name: 'Sai Yerni Akhil',
   fullName: 'Sai Yerni Akhil Madabattula',
-  title: 'Frontend Engineer',
-  bio: 'Frontend Engineer who loves to build and tinker applications',
+  title: 'Software Developer',
+  bio: 'Software Developer who loves to build and tinker applications',
   email: 'saiyerniakhil@gmail.com',
   website: 'https://saiyerniakhil.in',
   resumeUrl: '/resume.pdf',
@@ -34,7 +34,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/saiyerniakhil',
+    url: 'https://www.linkedin.com/in/sai-yerni-akhil-madabattula/',
     username: 'Sai Yerni Akhil',
     type: 'linkedin',
   },
