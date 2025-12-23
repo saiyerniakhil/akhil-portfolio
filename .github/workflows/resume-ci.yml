@@ -1,0 +1,21 @@
+name: Generate Resume
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-resume:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Resume Generation API
+        run: |
+          curl --request POST \
+            --url https://resume-ci-app-519265312784.europe-west1.run.app/generate \
+            --header 'content-type: application/json' \
+            --data "{
+              \"auth_key\": \"${{ secrets.RESUME_API_AUTH_KEY }}\",
+              \"upload_to_gcs\": true
+            }"
